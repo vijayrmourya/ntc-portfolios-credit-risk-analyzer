@@ -61,8 +61,9 @@ Open `http://localhost:8501` to view the interactive portal.
 
 ### Sample Imagaes from hosted app
 
-![Dashboard_1](images/Dashboard_1.png)
-![Dashboard_2](images/Dashboard_2.png)
+![Dashboard_1](images/image.png)
+
+![Dashboard_2](images/image_copy.png)
 
 ---
 
