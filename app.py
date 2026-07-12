@@ -332,7 +332,7 @@ PERSONAS = {
 }
 
 # 3. Create Navigation Tabs
-tabs = st.tabs(["👤 Credit Score Dashboard", "⚙️ Evaluator Blueprint", "📊 Comparative Portfolio Analytics"])
+tabs = st.tabs(["👤 Applicant Assessment Hub", "⚙️ Evaluator Design & Logic Blueprint", "📊 Consolidated Portfolio Analytics"])
 
 # Helper function to compute credit score based on 7 alternate features
 def calculate_credit_score(utility, volatility, dpd, age, balance, utilization, seasonal):
@@ -361,7 +361,7 @@ with tabs[0]:
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.header("👤 Applicant Selection & Tuning")
+        st.header("👤 Borrower Profile & Risk Indicators")
         
         # Segment Filtering
         segments_list = ["All Segments", "Business Owners", "IT / Tech Employees", "Gig Economy Workers", "Rural & Small Traders"]
@@ -399,12 +399,12 @@ with tabs[0]:
         else:
             st.markdown(f'<div class="risk-banner risk-purple">{current_persona["ai_summary"]}</div>', unsafe_allow_html=True)
 
-        st.subheader("🛠️ Real-time Data Tuning")
+        st.subheader("🛠️ Underwriting Variable & Cash Flow Simulation")
         st.caption("Simulate real-time alternate data ingestion by moving the parameters below.")
         
         # Sliders default to the selected profile's values
         utility_score = st.slider(
-            "Utility & BBPS Payment Consistency (%)", 
+            "BBPS Utility Payment Consistency Ratio (%)", 
             40, 100, int(current_persona["utility_consistency"]),
             help="Percentage of utility bills paid on time over last 12 months."
         )
@@ -419,12 +419,12 @@ with tabs[0]:
             help="Average delay in paying telecom or credit bills."
         )
         digital_footprint_age = st.slider(
-            "UPI/Aadhaar Ecosystem Age (Months)", 
+            "Digital Payment Footprint Vintage (Months)", 
             1, 60, int(current_persona["digital_footprint_age"]),
             help="Months since the user activated their first digital payment footprint."
         )
         average_balance_ratio = st.slider(
-            "Average Daily Balance (ADB) to EMI Ratio (%)", 
+            "Average Daily Balance (ADB) to EMI Coverage (%)", 
             0, 100, int(current_persona["average_balance_ratio"]),
             help="Ratio of liquid balance maintained in bank accounts compared to existing EMIs."
         )
@@ -446,7 +446,7 @@ with tabs[0]:
         )
 
     with col2:
-        st.header("📊 Real-Time Underwriting Assessment")
+        st.header("📊 Automated Credit Scoring & Risk Determination")
         
         # Determine credit tier designation
         if credit_score < 550:
@@ -492,7 +492,7 @@ with tabs[0]:
         st.components.v1.html(svg_html, height=160)
         
         # Explainable AI (SHAPley Values)
-        st.write("### 🔍 Explainable AI (SHAP Value Attribution)")
+        st.write("### 🔍 AI Scorecard (Attribution & Key Decision Drivers)")
         st.caption("How individual alternative data streams push the applicant's score compared to a base population average (~600).")
         
         # Compute contributions
@@ -531,8 +531,8 @@ with tabs[0]:
         shap_html += "</div>"
         st.components.v1.html(shap_html, height=350)
 
-        # Ingestion Verification Table
-        st.write("### 🛠️ Verification & Ingestion Audit Trail")
+        # Consent-Based Ingestion & Fraud Verification Trail
+        st.write("### 🛠️ Consent-Based Ingestion & Fraud Verification Trail")
         st.caption("This table tracks how this applicant's alternate data points are retrieved and verified, targeting the IDBI evaluator's security standards.")
         
         audit_trail = [
@@ -577,8 +577,8 @@ with tabs[0]:
 # TAB 2: EVALUATOR BLUEPRINT
 # ==========================================
 with tabs[1]:
-    st.header("⚙️ IDBI Evaluator Implementation Guide")
-    st.subheader("Architectural Path to Operationalize Alternate Underwriting")
+    st.header("⚙️ Production Deployment & Core Banking System (CBS) Integration Guide")
+    st.subheader("Enterprise System Integration Blueprint")
     st.write("""
     This blueprint explains how IDBI Bank can implement this alternate credit scoring framework in a production environment. 
     By bypassing RBI-regulated traditional credit bureaus (which fail for the New-To-Credit segment), IDBI can safely approve loans using consent-driven, automated data streams.
@@ -703,12 +703,12 @@ with tabs[1]:
     ), unsafe_allow_html=True)
 
 # ==========================================
-# TAB 3: COMPARATIVE PORTFOLIO ANALYTICS
+# TAB 3: consolidated PORTFOLIO ANALYTICS
 # ==========================================
 with tabs[2]:
-    st.header("📊 Multi-Persona Portfolio Matrix")
+    st.header("📊 Segmented Credit Portfolio Risk Matrix")
     st.write("""
-    This matrix displays the comparative features and calculated alternate credit scores for all **12 sample profiles** across the four key NTC segments.
+    This matrix displays the consolicated features and calculated alternate credit scores for all **12 sample profiles** across the four key NTC segments.
     This overview allows credit risk managers and IDBI evaluators to see how the engine establishes distinct boundaries between high, medium, and low-risk candidates.
     """)
     
