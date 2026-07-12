@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-# IDBI Innovate 2026: NTC Portfolios Credit Risk Analyzer (NTC/NTB Segment)
-=======
-<<<<<<< Updated upstream
-# ntc-portfolios-credit-risk-analyzer
-=======
 # IDBI Innovate 2026 - NTC Portfolios: Credit Risk Analyzer (NTC/NTB Segment)
->>>>>>> 57a2f4c (Naming conventions updated)
 
 An explainable, AI-driven risk assessment framework designed specifically for the **New-to-Credit (NTC)** and **New-to-Bank (NTB)** MSME segments in India (gig-economy workers, small kirana merchants, and rural entrepreneurs) who lack traditional credit histories.
 
@@ -23,14 +16,10 @@ An explainable, AI-driven risk assessment framework designed specifically for th
   4. **Rural Entrepreneurs & Local Shops**: Small dairy farmers, tea stalls, and weavers dependent on seasonal fluctuations.
 
 ### 🕹️ How to Run the Prototype Dashboard
-<<<<<<< HEAD
-=======
 
 App URL: https://ntc-portfolios-credit-risk-analyzer-idbi-curiousvt.streamlit.app/
 
 #### To run the app locally for yourself:
-
->>>>>>> 57a2f4c (Naming conventions updated)
 Ensure you have activated your virtual environment:
 ```bash
 git clone https://github.com/vijayrmourya/ntc-portfolios-credit-risk-analyzer.git
@@ -76,72 +65,7 @@ Open `http://localhost:8501` to view the interactive portal.
 
 To deploy this alternate credit scoring engine safely within an industry-standard banking ecosystem, the system shifts away from local code blocks to a **decoupled, event-driven serverless architecture**.
 
-<<<<<<< HEAD
-```mermaid
-graph TD
-    %% Styling
-    classDef default fill:#f9fafb,stroke:#cbd5e1,stroke-width:1px,color:#1e293b;
-    classDef user fill:#eff6ff,stroke:#3b82f6,stroke-width:2px,color:#1e3a8a;
-    classDef ingest fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f;
-    classDef model fill:#ecfdf5,stroke:#059669,stroke-width:2px,color:#065f46;
-    classDef cbs fill:#fdf2f8,stroke:#db2777,stroke-width:2px,color:#9d174d;
-
-    %% Client and Gateways
-    Client["IDBI Loan Portal / Credit Officer Console"]:::client
-    Gateway["Amazon API Gateway"]:::aws
-    Workflow["AWS Step Functions (Orchestration Workflow)"]:::aws
-
-    %% Event Ingestors
-    Fetch_AA["AWS Lambda (Fetch Account Aggregator Logs)"]:::aws
-    Fetch_GST["AWS Lambda (Fetch GSTN Revenue Data)"]:::aws
-    Fetch_BBPS["AWS Lambda (Fetch BBPS Utility History)"]:::aws
-
-    %% Data Providers
-    AA["Account Aggregator Network (FIPs)"]:::banking
-    GST["GST Network API"]:::banking
-    BBPS["BBPS Utility Gateway"]:::banking
-
-    %% Processing & Inference
-    Feature_Gen["AWS Lambda (On-Demand Feature Extraction)"]:::aws
-    SageMaker["Amazon SageMaker Serverless Inference (ML Model)"]:::aws
-    SHAP["AWS Lambda (SHAP Attribution Engine)"]:::aws
-
-    %% Storage & Output
-    Dynamo["Amazon DynamoDB (MSME Credit Health Cards)"]:::db
-    S3["Amazon S3 (Encrypted Consent Data Audit Lake)"]:::db
-    VPN["AWS Site-to-Site VPN / Direct Connect"]:::aws
-    Finacle["IDBI On-Premises Finacle CBS"]:::banking
-
-    %% Flows
-    Client -->|"Trigger Credit Assessment Event"| Gateway
-    Gateway -->|Initiate Workflow| Workflow
-
-    %% Step Functions Parallel Fetching
-    Workflow -->|Trigger Ingestion Events| Fetch_AA & Fetch_GST & Fetch_BBPS
-    Fetch_AA -->|"Request Decrypted Logs"| AA
-    Fetch_GST -->|"Request Tax Filings"| GST
-    Fetch_BBPS -->|"Request Payment History"| BBPS
-
-    %% Return Data Flow
-    AA -->|JSON Statement Data| Fetch_AA
-    GST -->|JSON Revenue Data| Fetch_GST
-    BBPS -->|JSON Bill Data| Fetch_BBPS
-
-    %% Feature Processing & Scoring
-    Fetch_AA & Fetch_GST & Fetch_BBPS -->|Raw Payloads| Feature_Gen
-    Feature_Gen -->|"Extract alternate credit features"| SageMaker
-    SageMaker -->|Credit Score & PD| SHAP
-    SHAP -->|Score + SHAP Attribution| Workflow
-
-    %% Save & Deliver Results
-    Workflow -->|"Archive consent data & logs (S3)"| S3
-    Workflow -->|"Save Credit Health Card (DynamoDB)"| Dynamo
-    Workflow -->|"Send Decision Payload"| VPN
-    VPN -->|"Auto-Disburse / Adjust Credit Lines"| Finacle
-```
-=======
-![System Architecture](images/system_architecture.png)
->>>>>>> 57a2f4c (Naming conventions updated)
+![System Architecture](images/Architecture.png)
 
 ---
 
@@ -167,7 +91,4 @@ graph TD
 * **Real-World Integration**: **AWS Direct Connect / VPN** routing into IDBI's **Infosys Finacle CBS**.
 * **Workflow**: Pushes the calculated credit score, PDF report, and SHAP attribution metrics directly into Finacle webhooks for immediate loan approval execution.
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 57a2f4c (Naming conventions updated)
+
