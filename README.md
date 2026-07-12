@@ -59,6 +59,11 @@ Open `http://localhost:8501` to view the interactive portal.
 #### 3. 📊 Multi-Persona Portfolio Matrix
 * Displays all 12 personas side-by-side inside a custom HTML table. Status pills (🟢 Approved, 🟡 Conditional, 🔴 Reject) highlight credit decision boundaries.
 
+### Sample Imagaes from hosted app
+
+![Dashboard_1](images/Dashboard_1.png)
+![Dashboard_2](images/Dashboard_2.png)
+
 ---
 
 ## 🏗️ Section 2: Production Architecture Blueprint & Enterprise Implementation
