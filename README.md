@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 # IDBI Innovate 2026: NTC Portfolios Credit Risk Analyzer (NTC/NTB Segment)
+=======
+<<<<<<< Updated upstream
+# ntc-portfolios-credit-risk-analyzer
+=======
+# IDBI Innovate 2026 - NTC Portfolios: Credit Risk Analyzer (NTC/NTB Segment)
+>>>>>>> 57a2f4c (Naming conventions updated)
 
 An explainable, AI-driven risk assessment framework designed specifically for the **New-to-Credit (NTC)** and **New-to-Bank (NTB)** MSME segments in India (gig-economy workers, small kirana merchants, and rural entrepreneurs) who lack traditional credit histories.
 
@@ -16,6 +23,14 @@ An explainable, AI-driven risk assessment framework designed specifically for th
   4. **Rural Entrepreneurs & Local Shops**: Small dairy farmers, tea stalls, and weavers dependent on seasonal fluctuations.
 
 ### 🕹️ How to Run the Prototype Dashboard
+<<<<<<< HEAD
+=======
+
+App URL: https://ntc-portfolios-credit-risk-analyzer-idbi-curiousvt.streamlit.app/
+
+#### To run the app locally for yourself:
+
+>>>>>>> 57a2f4c (Naming conventions updated)
 Ensure you have activated your virtual environment:
 ```bash
 git clone https://github.com/vijayrmourya/ntc-portfolios-credit-risk-analyzer.git
@@ -61,6 +76,7 @@ Open `http://localhost:8501` to view the interactive portal.
 
 To deploy this alternate credit scoring engine safely within an industry-standard banking ecosystem, the system shifts away from local code blocks to a **decoupled, event-driven serverless architecture**.
 
+<<<<<<< HEAD
 ```mermaid
 graph TD
     %% Styling
@@ -123,6 +139,9 @@ graph TD
     Workflow -->|"Send Decision Payload"| VPN
     VPN -->|"Auto-Disburse / Adjust Credit Lines"| Finacle
 ```
+=======
+![System Architecture](images/system_architecture.png)
+>>>>>>> 57a2f4c (Naming conventions updated)
 
 ---
 
@@ -148,3 +167,7 @@ graph TD
 * **Real-World Integration**: **AWS Direct Connect / VPN** routing into IDBI's **Infosys Finacle CBS**.
 * **Workflow**: Pushes the calculated credit score, PDF report, and SHAP attribution metrics directly into Finacle webhooks for immediate loan approval execution.
 
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 57a2f4c (Naming conventions updated)
