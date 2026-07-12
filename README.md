@@ -63,7 +63,7 @@ Open `http://localhost:8501` to view the interactive portal.
 
 ![Dashboard_1](images/image.png)
 
-![Dashboard_2](images/image_copy.png)
+![Dashboard_2](images/image-copy.png)
 
 ---
 
