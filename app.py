@@ -88,6 +88,26 @@ st.markdown("""
         color: #4a148c;
         border: 1px solid #e1bee7;
     }
+    /* Evaluator Guide Banner */
+    .evaluator-guide {
+        background: linear-gradient(135deg, #FFF5F0 0%, #FFEBE0 100%);
+        border-left: 6px solid #FF6B35;
+        color: #1A365D;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        box-shadow: 0 4px 10px rgba(255, 107, 53, 0.15);
+    }
+    /* Highlight Streamlit Selectbox widget borders to stand out */
+    div[data-testid="stSelectbox"] {
+        border: 2px solid #FF6B35 !important;
+        border-radius: 8px !important;
+        padding: 2px 6px !important;
+        background-color: rgba(255, 107, 53, 0.02) !important;
+        box-shadow: 0 0 10px rgba(255, 107, 53, 0.1) !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -379,7 +399,7 @@ with tabs[0]:
         
         # Segment Filtering
         segments_list = ["All Segments", "Business Owners", "IT / Tech Employees", "Gig Economy Workers", "Rural & Small Traders"]
-        selected_segment = st.selectbox("Filter by Segment", segments_list)
+        selected_segment = st.selectbox("🔍 Filter by Segment", segments_list)
         
         # Filter personas based on segment selection
         filtered_personas = {}
@@ -387,7 +407,7 @@ with tabs[0]:
             if selected_segment == "All Segments" or v["segment"] == selected_segment:
                 filtered_personas[k] = v
                 
-        selected_name = st.selectbox("Select Target Underwriting Profile", list(filtered_personas.keys()))
+        selected_name = st.selectbox("🎯 Select Target Underwriting Profile (Change Candidates Here)", list(filtered_personas.keys()))
         current_persona = PERSONAS[selected_name]
         
         # Display Premium Profile Badge
