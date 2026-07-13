@@ -1,3 +1,17 @@
+# ==============================================================================
+# © 2026 Vijay Mourya. All Rights Reserved.
+# 
+# This technical blueprint, comprising the proprietary multi-persona logic, 
+# dynamic transactional risk-scoring metrics, and XAI compliance framework, 
+# constitutes the exclusive intellectual property of the author. 
+# 
+# Access and operational rights are granted solely for evaluation purposes 
+# within the IDBI Innovate 2026 Hackathon Core Challenge Track.
+# Event URL: https://hack2skill.com/event/idbinnovate/?utm_source=hack2skill&utm_medium=homepage&sectionid=6a25acee3b5d90996644544c
+# 
+# For developer queries or licensing inquiries, contact: vijayrmourya@gmail.com
+# ==============================================================================
+
 import streamlit as st
 import pandas as pd
 
