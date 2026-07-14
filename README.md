@@ -19,7 +19,7 @@ An explainable, AI-driven risk assessment framework designed specifically for th
 
 ### App URL: https://ntc-portfolios-credit-risk-analyzer-idbi-curiousvt.streamlit.app/
 
-If you see below screen just click `Yes, get this app back up!` wait for 2-3 minutes it will come online immediately
+If you see below screen just click `Yes, get this app back up!` wait for 1 minute, it will come online immediately.
 
 `This app has gone to sleep due to inactivity. Would you like to wake it back up?`
 <img width="781" height="397" alt="image" src="https://github.com/user-attachments/assets/dc12bdb1-e8fa-4bc8-9f6c-96d8028ef1a8" />
