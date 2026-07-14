@@ -17,7 +17,7 @@ An explainable, AI-driven risk assessment framework designed specifically for th
 
 ### 🕹️ How to Run the Prototype Dashboard
 
-App URL: https://ntc-portfolios-credit-risk-analyzer-idbi-curiousvt.streamlit.app/
+### App URL: https://ntc-portfolios-credit-risk-analyzer-idbi-curiousvt.streamlit.app/
 
 If you see below screen just click `Yes, get this app back up!` wait for 2-3 minutes it will come online immediately
 
